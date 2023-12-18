@@ -1,4 +1,6 @@
 <div align="center">
+
+ 
 <img src="docs/img/openvino-logo-purple-black.png" width="400px">
 
 [![PyPI Status](https://badge.fury.io/py/openvino.svg)](https://badge.fury.io/py/openvino)
