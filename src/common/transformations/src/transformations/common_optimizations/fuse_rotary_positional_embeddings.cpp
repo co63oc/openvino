@@ -631,7 +631,7 @@ ov::pass::RoPEFusionChatGLM::RoPEFusionChatGLM(int split_output_id, const bool s
             makePattern<opset1::Concat>({{-1}, {1}, seq_length, {ndims / 2}, {2}}, {{"axis", 0}});
         auto const_target_shape_2 = makeConst({batch, 1, seq_len, ndims / 2, 2});
 
-        // Slice cos_sin_cache to support 2-dimentional RoPE
+        // Slice cos_sin_cache to support 2-dimensional RoPE
         auto ScatterUpdate = makePattern<opset3::ScatterUpdate>({{0, 0}, {1}, seq_length, {0}}, {});
         auto slice_Slice_449_1d = makePattern<ov::opset8::Slice>({cos_sin_cache, {0}, seq_length, {1}, {1}});
         auto slice_Slice_449_2d = makePattern<ov::opset8::Slice>({cos_sin_cache, {0, 0}, ScatterUpdate, {1, 1}, {0}});

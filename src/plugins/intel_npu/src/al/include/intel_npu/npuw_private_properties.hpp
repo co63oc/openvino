@@ -205,7 +205,7 @@ static constexpr ov::Property<std::string> par_matmul_merge_dims{"NPUW_PMM"};
 /**
  * @brief
  * Type: bool.
- * Add Slice before the last MatMul reducing output's dimention.
+ * Add Slice before the last MatMul reducing output's dimension.
  * Default value: false.
  */
 static constexpr ov::Property<bool> slice_out{"NPUW_SLICE_OUT"};

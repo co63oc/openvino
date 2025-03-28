@@ -221,7 +221,7 @@ TEST_P(ConvolutionLayerCPUTest, CompareWithRefs) {
     }
 
 // FIXME: ACL output shape check fails if kernel, stride and padding equal to 1
-// CpuGemm::validate checks that 2nd and 3rd dimention of the input and output shapes are equal and fails (ticket 114201)
+// CpuGemm::validate checks that 2nd and 3rd dimension of the input and output shapes are equal and fails (ticket 114201)
 #if defined(OPENVINO_ARCH_ARM) || defined(OPENVINO_ARCH_ARM64)
     if (std::all_of(kernel.begin(), kernel.end(), [](size_t i){return i == 1;}) &&
         std::all_of(stride.begin(), stride.end(), [](size_t i){return i == 1;}) &&

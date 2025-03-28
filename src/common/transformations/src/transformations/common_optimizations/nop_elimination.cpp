@@ -1178,7 +1178,7 @@ ov::pass::EliminateStridedSlice::EliminateStridedSlice() {
             }
             return false;
         };
-        // check that we won't do change dimention rank
+        // check that we won't do change dimension rank
         if (!check_mask(strided_slice_node->get_shrink_axis_mask()) ||
             !check_mask(strided_slice_node->get_new_axis_mask()) ||
             !check_mask(strided_slice_node->get_ellipsis_mask())) {
@@ -1272,7 +1272,7 @@ ov::pass::EliminateStridedSliceByShape::EliminateStridedSliceByShape() {
                 }
                 return false;
             };
-            // check that we won't do change dimention rank
+            // check that we won't do change dimension rank
             if (!check_mask(strided_slice_node->get_shrink_axis_mask()) ||
                 !check_mask(strided_slice_node->get_new_axis_mask()) ||
                 !check_mask(strided_slice_node->get_ellipsis_mask())) {

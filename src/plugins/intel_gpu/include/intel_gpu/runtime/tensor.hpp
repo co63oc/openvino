@@ -55,25 +55,25 @@ struct dim_vec_limits {
 
 template <>
 struct dim_vec_limits<dim_vec_kind::batch> {
-    static constexpr int32_t max_dimentionality = tensor_batch_dim_max;
+    static constexpr int32_t max_dimensionality = tensor_batch_dim_max;
     static constexpr int32_t dim_offset = 0;
 };
 
 template <>
 struct dim_vec_limits<dim_vec_kind::feature> {
-    static constexpr int32_t max_dimentionality = tensor_feature_dim_max;
+    static constexpr int32_t max_dimensionality = tensor_feature_dim_max;
     static constexpr int32_t dim_offset = tensor_batch_dim_max;
 };
 
 template <>
 struct dim_vec_limits<dim_vec_kind::spatial> {
-    static constexpr int32_t max_dimentionality = tensor_spatial_dim_max;
+    static constexpr int32_t max_dimensionality = tensor_spatial_dim_max;
     static constexpr int32_t dim_offset = tensor_batch_dim_max + tensor_feature_dim_max;
 };
 
 template <>
 struct dim_vec_limits<dim_vec_kind::group> {
-    static constexpr int32_t max_dimentionality = tensor_group_dim_max;
+    static constexpr int32_t max_dimensionality = tensor_group_dim_max;
     static constexpr int32_t dim_offset = tensor_batch_dim_max + tensor_feature_dim_max + tensor_spatial_dim_max;
 };
 
@@ -81,7 +81,7 @@ struct dim_vec_limits<dim_vec_kind::group> {
 template <dim_vec_kind Kind>
 class dim_vec_kind_init {
 public:
-    static constexpr auto _max_dimensionality = dim_vec_limits<Kind>::max_dimentionality;
+    static constexpr auto _max_dimensionality = dim_vec_limits<Kind>::max_dimensionality;
     static constexpr auto _dimOffset = dim_vec_limits<Kind>::dim_offset;
 
     template <typename... DimTys>

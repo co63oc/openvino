@@ -95,7 +95,7 @@ def adaptive_avg_pool(
     """Return a node which performs AdaptiveAvgPool operation.
 
     :param data: The list of input nodes
-    :param output_shape: the shape of spatial dimentions after operation
+    :param output_shape: the shape of spatial dimensions after operation
     :param name: Optional output node name.
     :return: The new node performing AdaptiveAvgPool operation on the data
     """
@@ -113,7 +113,7 @@ def adaptive_max_pool(
     """Return a node which performs AdaptiveMaxPool operation.
 
     :param data: The list of input nodes
-    :param output_shape: the shape of spatial dimentions after operation
+    :param output_shape: the shape of spatial dimensions after operation
     :param index_element_type: Type of indices output.
     :param name: Optional output node name.
     :return: The new node performing AdaptiveMaxPool operation on the data

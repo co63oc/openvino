@@ -1004,7 +1004,7 @@ TEST(reorder_gpu, basic_convert_uint8rgbabyxf_to_fp32_bfyx) {
     //
     //  Input               : 1x5x5x4 (UINT8)
     //  Intermediate        : 1x4x5x5 (FP32) {different mem format and ordering}
-    //  Output              : 1x3x5x5 (FP32) {using crop layer to reduce feature dimention and drop A from RGBA}
+    //  Output              : 1x3x5x5 (FP32) {using crop layer to reduce feature dimension and drop A from RGBA}
     //
     //  Output is expected to contain the same value as input
     //

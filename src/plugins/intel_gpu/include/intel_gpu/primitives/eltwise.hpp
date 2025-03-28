@@ -70,7 +70,7 @@ enum class eltwise_mode : int32_t {
 /// Also supports built-in Relu @ref activation available by setting it in arguments.
 /// @notes
 /// - both inputs have to have equal sizes in all dimensions or the input tensors are broadcastable
-///   to the same shape in which the size of each dimention is a max. of input sizes on this dimension)
+///   to the same shape in which the size of each dimension is a max. of input sizes on this dimension)
 /// - format of both inputs has to be the same
 /// - when using integer types, only following eltwise modes are supported: sum, sub, prod, div
 struct eltwise : public primitive_base<eltwise> {

@@ -1190,7 +1190,7 @@ format layout_optimizer::get_preferred_format(program_node& node) {
                 // Check if selected format can be adjusted to the required input rank
                 // If no, use default fotmat instead
                 try {
-                    // 7-dimention and 8-dimention only support plain format
+                    // 7-dimension and 8-dimension only support plain format
                     if (in_lay_rank >= 7 || out_lay_rank >= 7) {
                         fmt = format::get_default_format(in_lay_rank);
                     } else {

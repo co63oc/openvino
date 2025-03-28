@@ -98,7 +98,7 @@ TSGatherForward::TSGatherForward() {
             - There might be a situation when output Gather shape has one dimension
                 less than input shape. In a such case n_axis_dims < 0 and we should
                 skip order_val[axis] and all the next order_val[j] will be reduced.
-            - On the other hand in a case with multidimentional index Gather output
+            - On the other hand in a case with multidimensional index Gather output
                 shape has more dimensions than input shape. We need to add this
                 dimensions into the transpose order and increase all next order_val[j]
         */

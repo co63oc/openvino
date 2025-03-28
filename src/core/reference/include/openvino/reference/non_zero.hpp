@@ -42,8 +42,8 @@ void non_zero(const T* arg, U* out, const Shape& arg_shape) {
         return;
     }
 
-    // Dimensional size for the arg_shape. This is used to map one-dimentional
-    // arg array indices to corresponding arg_rank-dimentional shape indices.
+    // Dimensional size for the arg_shape. This is used to map one-dimensional
+    // arg array indices to corresponding arg_rank-dimensional shape indices.
     // i.e., arg_shape {2, 3, 2}
     // Array index 4 in arg (arg[4]) correspond to 3-D index of [0][2][0]
     const auto arg_strides = row_major_strides(arg_shape);

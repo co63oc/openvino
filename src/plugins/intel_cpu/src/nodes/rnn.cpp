@@ -370,7 +370,7 @@ bool RNN::testNativeOrder(const std::shared_ptr<const ov::Node>& op) {
 namespace {
 /**
  * Extends Rnn ngraph shape inference implementation. The main purpose of this class is to do the trick with
- * dimentions permutation, necessary due to the mismatch between the ngrpah and the oneDNN RNN node descriptions.
+ * dimensions permutation, necessary due to the mismatch between the ngrpah and the oneDNN RNN node descriptions.
  *
  */
 class RnnShapeInfer : public IShapeInfer {

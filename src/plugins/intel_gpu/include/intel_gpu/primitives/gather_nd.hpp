@@ -22,7 +22,7 @@ struct gather_nd : public primitive_base<gather_nd> {
     /// @param input_rank           Rank of input data.
     /// @param indices_rank         Rank of indices.
     /// @param batch_dims           batch_dims as an attribute of GatherND. Optional.
-    /// @param batch_merged_output  batched output shape is merged as a dimention for v5.
+    /// @param batch_merged_output  batched output shape is merged as a dimension for v5.
     ///                             In case of output{3, 2, 4, 5} at batch_dims = 2, real output shape should be {6, 4, 5}.
     ///                             This should be false for v8.
     ///                             For batch_dims < 2, This doesn't have any meaning.

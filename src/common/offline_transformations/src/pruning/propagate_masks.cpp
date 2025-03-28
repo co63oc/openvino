@@ -575,7 +575,7 @@ public:
             }
             if (!weights_mask) {
                 // Set dummy mask to weight input in case this input has no mask
-                // and has broadcastable dimentions
+                // and has broadcastable dimensions
                 if (!weights_shape_broadcasted_dims.size()) {
                     OPENVINO_DEBUG("No weights mask for: ", m_output.get_node()->get_friendly_name(), "\n");
                     return false;
@@ -1194,7 +1194,7 @@ public:
 
                 switch (configuration) {
                 case ReshapeType::default_: {
-                    // Case when input and output dimensions size are equal from 0 to k dimentions
+                    // Case when input and output dimensions size are equal from 0 to k dimensions
                     // and dimension k+1 is not exist in input or output shape or
                     // k+1 dimensionss has different size. Masks are proagating as is through
                     // from 0 to k dimensions.
